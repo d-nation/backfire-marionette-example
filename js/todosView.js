@@ -24,13 +24,10 @@ define(['marionette'],
         },
 
         onSubmitClick: function(){
-            var newTodo = this.ui.newTodoInput.val(),
-                newId;
+            var newTodo = this.ui.newTodoInput.val();
 
-            //get the biggest id and add 1
-            newId = parseInt(this.collection.at(this.collection.length - 1).get("id")) + 1;
+            this.collection.add({name: newTodo});
 
-            this.collection.add({id: newId.toString(), name: newTodo});
             this.ui.newTodoInput.val("");
         }
     });
