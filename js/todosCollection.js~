@@ -8,6 +8,6 @@ define(['backbone', 'backfire'], function(Backbone, Backfire){
     return Backbone.Firebase.Collection.extend({
         model: TodoModel,
 
-        firebase: "https://yourfirebase.firebaseio.com/Todos"
+        firebase: "https://dustinnation.firebaseio.com/Todos"
     });
 });
