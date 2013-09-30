@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Backfire Example</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+
+        <!--<link href="/css/app.css" rel="stylesheet">-->
+    </head>
+
+    <body>
+        <div id="main-container"></div>
+        <script data-main="js/main.js?v0.0.1" src="js/require.js"></script>
+
+        <script type="text/html" id="template-todoListCompositeView">
+            <ul id="todo-list"></ul>
+            <input id="new-todo" placeholder="What needs to be done?" autofocus>
+            <button id="todo-submit"><i class="icon-ok"></i></button>
+        </script>
+        <script type="text/html" id="template-todoItemView">
+            <%= name %>
+        </script>
+    </body>
+</html>
