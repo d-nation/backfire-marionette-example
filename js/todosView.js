@@ -5,7 +5,15 @@ define(['marionette'],
     var TodoItemView = Marionette.ItemView.extend({
         tagName: "li",
 
-        template: "#template-todoItemView"
+        template: "#template-todoItemView",
+
+        events: {
+            "click .todo-done": "onDoneClick"
+        },
+
+        onDoneClick: function(){
+            this.model.collection.remove(this.model);
+        }
     });
 
     return Marionette.CompositeView.extend({
@@ -21,6 +29,10 @@ define(['marionette'],
 
         events: {
             "click #todo-submit": "onSubmitClick"
+        },
+
+        initialize: function(){
+            this.collection.on("change", this.render);
         },
 
         onSubmitClick: function(){

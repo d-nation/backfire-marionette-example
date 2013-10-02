@@ -15,10 +15,10 @@
         <script type="text/html" id="template-todoListCompositeView">
             <ul id="todo-list"></ul>
             <input id="new-todo" placeholder="What needs to be done?" autofocus>
-            <button id="todo-submit"><i class="icon-ok"></i></button>
+            <button id="todo-submit" class="btn"><i class="icon-plus"></i></button>
         </script>
         <script type="text/html" id="template-todoItemView">
-            <%= name %>
+            <%= name %> <i class="todo-done icon-ok"></i>
         </script>
     </body>
 </html>
